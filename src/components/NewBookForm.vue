@@ -1,22 +1,22 @@
 <template>
   <div>
       <form class="new-book-form" v-on:submit.prevent="addNewBook">
-          <div>
+          <div class = "form-item">
             <label for="title">Title: </label>
             <input type="text" name="title" id="title" class="title-input" v-model="newBook.title" />
           </div>
 
-          <div>
+          <div class = "form-item">
             <label for="author">Author: </label>
             <input type="text" name="author" id="author" class="author-input" v-model="newBook.author" />
           </div>
 
-          <div>
+          <div class = "form-item">
           <label for="isbn">ISBN: </label>
           <input type="text" name="isbn" id="isbn" class="isbn-input" v-model="newBook.isbn" />
           </div>
 
-          <div>
+          <div class = "form-item">
           <input type="submit" value="Add" />
           </div>          
       </form>
@@ -47,5 +47,16 @@ export default {
 </script>
 
 <style>
-
+.new-book-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20%;
+    margin: 0 auto;
+    
+}
+.form-item {
+    padding: 5px;
+    text-align: right;
+}
 </style>

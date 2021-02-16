@@ -1,6 +1,6 @@
 <template>
-  <div>
-      <form class="new-book-form" v-on:submit.prevent="addNewBook">
+  <div class="new-book-form">
+      <form  v-on:submit.prevent="addNewBook">
           <div class = "form-item">
             <label for="title">Title: </label>
             <input type="text" name="title" id="title" class="title-input" v-model="newBook.title" />
@@ -51,12 +51,20 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 20%;
+    max-width: 10%;
     margin: 0 auto;
     
 }
 .form-item {
+    display: flex;
+    justify-content: flex-end;
     padding: 5px;
-    text-align: right;
+    
+}
+.form-item label{
+    padding: 5px;
+}
+.form-item input{
+    padding: 5px;
 }
 </style>

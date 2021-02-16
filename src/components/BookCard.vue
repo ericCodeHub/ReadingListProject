@@ -45,4 +45,7 @@ export default {
 .card .book-author {
     font-size: 1rem;
 }
+.card img {
+    max-width: 90%;
+}
 </style>
